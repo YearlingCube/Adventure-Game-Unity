@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Terrain
+  - Enemy
+  - Moving Platform
+  - WIN
+  - Jumper
+  - Lever
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Clouds
+    uniqueID: 898241123
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: layer 2
+    uniqueID: 4074307083
+    locked: 0
+  - name: layer 3
+    uniqueID: 2315646959
+    locked: 0
+  - name: layer 4
+    uniqueID: 387759437
+    locked: 0
+  - name: Player
+    uniqueID: 4107719463
+    locked: 0
+  - name: Over player
+    uniqueID: 3900122035
+    locked: 0
+  - name: over over player
+    uniqueID: 894119907
+    locked: 0
+  - name: over over over player
+    uniqueID: 3927384447
+    locked: 0
+  - name: over over over over player
+    uniqueID: 3856198479
+    locked: 0

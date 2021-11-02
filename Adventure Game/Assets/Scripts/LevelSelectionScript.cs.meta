@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: fd13f4570ab795541994b4ef53f6bea3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Level: {instanceID: 0}
+  - Level1Button: {instanceID: 0}
+  - Level2Button: {instanceID: 0}
+  - Level3Button: {instanceID: 0}
+  - Level4Button: {instanceID: 0}
+  - Level2ButtonUnlockedState: {fileID: 21300000, guid: 2238d262f074b9c4d9e226f1c15094e0,
+      type: 3}
+  - Level3ButtonUnlockedState: {fileID: 21300000, guid: 0e8cfc74aa65e4642be869d1f09ee6b9,
+      type: 3}
+  - Level4ButtonUnlockedState: {fileID: 21300000, guid: 509b809e095e69e4fb3ccd879492a72f,
+      type: 3}
+  - Level2ButtonLockedState: {fileID: 21300000, guid: 46ae9a02b88998240b66bab7a82c8b63,
+      type: 3}
+  - Level3ButtonLockedState: {fileID: 21300000, guid: 25627901c9004cd428ddaead4894a4bb,
+      type: 3}
+  - Level4ButtonLockedState: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
