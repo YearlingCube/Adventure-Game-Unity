@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;  
+using UnityEngine.SceneManagement;
 
 public class LevelSelectionScript : MonoBehaviour
 {
@@ -18,6 +18,8 @@ public class LevelSelectionScript : MonoBehaviour
     public Sprite Level4ButtonLockedState;
 
     int level = GameManager.Level;
+
+    public static bool Reset = false;
     void Update()
     {
         Debug.Log(level);
@@ -29,6 +31,10 @@ public class LevelSelectionScript : MonoBehaviour
                 Level2Button.GetComponent<Image>().sprite = Level2ButtonUnlockedState;
             }
         }
+        else if (level < 4)
+        {
+            Level2Button.GetComponent<Image>().sprite = Level2ButtonLockedState;
+        }
         if (Level3Button.GetComponent<Image>().sprite = Level3ButtonLockedState)
         {
             if (level >= 5)
@@ -36,12 +42,20 @@ public class LevelSelectionScript : MonoBehaviour
                 Level3Button.GetComponent<Image>().sprite = Level3ButtonUnlockedState;
             }
         }
+        else if(level < 5)
+        {
+            Level3Button.GetComponent<Image>().sprite = Level3ButtonLockedState;
+        }
         if (Level4Button.GetComponent<Image>().sprite = Level4ButtonLockedState)
         {
             if (level >= 6)
             {
                 Level4Button.GetComponent<Image>().sprite = Level4ButtonUnlockedState;
             }
+        }
+        else if (level < 6)
+        {
+            Level4Button.GetComponent<Image>().sprite = Level4ButtonLockedState;
         }
     }
     // Loads Level 1
@@ -54,7 +68,7 @@ public class LevelSelectionScript : MonoBehaviour
     {
         if (Level2Button.GetComponent<Image>().sprite = Level2ButtonUnlockedState)
         {
-        SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2");
         }
 
     }

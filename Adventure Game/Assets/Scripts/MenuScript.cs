@@ -49,4 +49,13 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelection");
     }
+    public void ResetData()
+    {
+        Saving.ResetLevel();
+        Debug.Log(Saving.SavedLevel);
+    }
+    public static void ResetLevel()
+    {
+        LevelSelectionScript.Reset = true;
+    }
 }
