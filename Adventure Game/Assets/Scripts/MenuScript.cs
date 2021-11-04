@@ -47,14 +47,6 @@ public class MenuScript : MonoBehaviour
     // Opens Level Selection Menu
     public void LevelSelection()
     {
-        Saving.Load();
         SceneManager.LoadScene("LevelSelection");
-    }
-    public void ResetData()
-    {
-        Saving.ResetLevel();
-        Saving.Load();
-        GameManager.ResetLevel();
-        Debug.Log(Saving.SavedLevel);
     }
 }
