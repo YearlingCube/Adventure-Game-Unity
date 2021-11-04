@@ -31,9 +31,12 @@ public class LevelSelectionScript : MonoBehaviour
                 Level2Button.GetComponent<Image>().sprite = Level2ButtonUnlockedState;
             }
         }
-        else if (level < 4)
+        else if (Level2Button.GetComponent<Image>().sprite = Level2ButtonUnlockedState)
         {
+            if (level < 4)
+            {
             Level2Button.GetComponent<Image>().sprite = Level2ButtonLockedState;
+            }
         }
         if (Level3Button.GetComponent<Image>().sprite = Level3ButtonLockedState)
         {
@@ -42,9 +45,12 @@ public class LevelSelectionScript : MonoBehaviour
                 Level3Button.GetComponent<Image>().sprite = Level3ButtonUnlockedState;
             }
         }
-        else if(level < 5)
+        else if (Level3Button.GetComponent<Image>().sprite = Level3ButtonUnlockedState)
         {
+            if (level < 5)
+            {
             Level3Button.GetComponent<Image>().sprite = Level3ButtonLockedState;
+            }
         }
         if (Level4Button.GetComponent<Image>().sprite = Level4ButtonLockedState)
         {
@@ -53,9 +59,12 @@ public class LevelSelectionScript : MonoBehaviour
                 Level4Button.GetComponent<Image>().sprite = Level4ButtonUnlockedState;
             }
         }
-        else if (level < 6)
+        else if (Level4Button.GetComponent<Image>().sprite = Level4ButtonUnlockedState)
         {
+            if (level < 6)
+            {
             Level4Button.GetComponent<Image>().sprite = Level4ButtonLockedState;
+            }
         }
     }
     // Loads Level 1
