@@ -11,6 +11,7 @@ TagManager:
   - WIN
   - Jumper
   - Lever
+  - Hurt
   layers:
   - Default
   - TransparentFX

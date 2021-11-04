@@ -26,4 +26,16 @@ public class Saving : MonoBehaviour
         Debug.Log("Saved Level" + SavedLevel);
         sw.Close();
     }
+    public static void ResetLevel()
+    {
+        if (File.Exists(file))
+        {
+            File.Delete(file);
+        }
+        FileStream fs = File.Create("dataLevel.txt");
+        var sw = new StreamWriter(fs);
+        sw.Write("3");
+        sw.Close();
+        SavedLevel = 3;
+    }
 }

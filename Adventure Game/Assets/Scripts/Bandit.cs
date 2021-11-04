@@ -179,6 +179,10 @@ public class Bandit : MonoBehaviour {
             currentPlatform = coll.gameObject.transform;
             transform.SetParent(currentPlatform);
         }
+        if (coll.gameObject.tag == "Hurt")
+        {
+            TakeDamage(1);
+        }
         
     }
     private void OnCollisionExit2D(Collision2D collision)
