@@ -11,6 +11,7 @@ TagManager:
   - WIN
   - Jumper
   - Lever
+  - Hurt
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: under Clouds
+    uniqueID: 2207865135
+    locked: 0
   - name: Clouds
     uniqueID: 898241123
     locked: 0
@@ -74,4 +78,10 @@ TagManager:
     locked: 0
   - name: over over over over player
     uniqueID: 3856198479
+    locked: 0
+  - name: over over over over over player
+    uniqueID: 960565983
+    locked: 0
+  - name: over over over over over over player
+    uniqueID: 1099326039
     locked: 0

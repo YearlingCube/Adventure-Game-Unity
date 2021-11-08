@@ -102,6 +102,7 @@ public class Enemy : MonoBehaviour
     {
         if (Time.time > SwingTime)
         {
+            isAttacking = true;
             m_animator.SetTrigger("Attack");
             SwingTime = Time.time + SwingRate;
 
@@ -110,9 +111,19 @@ public class Enemy : MonoBehaviour
 
             foreach (Collider2D Player in HitPlayer)
             {
+                if (Player.GetComponent<Bandit>().Shielded == false)
+                {
                 Player.GetComponent<Bandit>().TakeDamage(attackDamage);
+                }   
             }
         }
+        else
+        {
+            m_animator.SetInteger("AnimState", 1);
+
+        }
+
+
     }
     // Take Damage
     public void TakeDamage(int Damage)
@@ -131,6 +142,13 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
         Attack();
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            isAttacking = false;
         }
     }
     // Gizmo's OnDrawSelected

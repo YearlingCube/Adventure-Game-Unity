@@ -1,14 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset;
+     public Transform trackingTarget;
+
+     public float xOffset;
+
+     public float yOffset;
+
+     public float xfollowSpeed;
+     public float yfollowSpeed;
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z); // Camera follows the player with specified offset position
+        float xTarget = trackingTarget.position.x + xOffset;
+        float yTarget = trackingTarget.position.y + yOffset;
+
+        float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * xfollowSpeed);
+        float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * yfollowSpeed);
+
+        transform.position = new Vector3(xNew, yNew, transform.position.z);
     }
 }

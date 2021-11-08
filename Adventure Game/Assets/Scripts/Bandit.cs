@@ -39,6 +39,10 @@ public class Bandit : MonoBehaviour {
 
     Transform currentPlatform;
 
+    public Transform Shield;
+    public bool Shielded = false;
+    public bool hasShield = false;
+
     // Executes When Script is Started
     void Start () {
         m_animator = GetComponent<Animator>();
@@ -48,7 +52,34 @@ public class Bandit : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (hasShield == true)
+            {
+                Shielded = true;
+                Shield.gameObject.SetActive(true);
+                
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.F))
+        {
+            if (hasShield == true)
+            {
+                if (Shielded == true)
+                {
+                    Shielded = false;
+                    Shield.gameObject.SetActive(false);
+                }
+            }
+        }
+        if (Shielded == true)
+        {
+            m_speed = 2f;
+        }
+        else if (Shielded == false)
+        {
+            m_speed = 4.0f;
+        }
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State()) {
             m_grounded = true;
@@ -179,6 +210,10 @@ public class Bandit : MonoBehaviour {
             currentPlatform = coll.gameObject.transform;
             transform.SetParent(currentPlatform);
         }
+        if (coll.gameObject.tag == "Hurt")
+        {
+            TakeDamage(1);
+        }
         
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -195,12 +230,16 @@ public class Bandit : MonoBehaviour {
             {
                 GameManager.GetComponent<GameManager>().NextLevel();
             }
-            if (collision.gameObject.tag == "Lever")
+           
+        }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Lever")
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                
-                }
+                collision.GetComponent<Lever>().FlipLever();
             }
         }
-  }
+    }
+}

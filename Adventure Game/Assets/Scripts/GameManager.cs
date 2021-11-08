@@ -51,5 +51,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }
+    public static void ResetLevel()
+    {
+        Level = 3;
+    }
 
 }
